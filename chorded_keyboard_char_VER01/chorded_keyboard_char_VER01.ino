@@ -1,5 +1,5 @@
 /*********************************************************************
-working?
+
   Human Interface Design (HID)
   Basic Chorded Keyboard
   with chord delay and auto repeat
@@ -36,7 +36,7 @@ const int LEDpin = 5;
 // variables to control button repeat
 byte lastButtonState = B000000;
 // delay time in milliseconds before button press is counted
-const int keyPressDelay = 800;
+const int keyPressDelay = 700;
 // the last time the buttons were pressed
 long timeOfLastKeyPress = 0;
 // the time in milliseconds before auto repeat
@@ -78,7 +78,9 @@ void loop(void)
   // if the button state has changed wait a short time
   // this will prevent incomplete chords from being read
   if (buttonState != lastButtonState) delay(keyPressDelay);
-  // check buttons again - this is considered a valid chord
+  if (buttonState == lastButtonState) delay(keyPressDelay);
+
+ // check buttons again - this is considered a valid chord
   buttonState = readButtonState();
 
   // the result will be a number between 0 (no buttons pressed) and 63 (all buttons pressed)
