@@ -36,7 +36,7 @@ const int LEDpin = 5;
 // variables to control button repeat
 byte lastButtonState = B000000;
 // delay time in milliseconds before button press is counted
-const int keyPressDelay = 700;
+const int keyPressDelay = 300;
 // the last time the buttons were pressed
 long timeOfLastKeyPress = 0;
 // the time in milliseconds before auto repeat
@@ -78,8 +78,8 @@ void loop(void)
   // if the button state has changed wait a short time
   // this will prevent incomplete chords from being read
   if (buttonState != lastButtonState) delay(keyPressDelay);
-  if (buttonState == lastButtonState) delay(keyPressDelay);
-
+//  if (buttonState == lastButtonState) delay(keyPressDelay);
+delay (keyPressDelay);
  // check buttons again - this is considered a valid chord
   buttonState = readButtonState();
 
