@@ -14,13 +14,13 @@
 *********************************************************************/
 
 #include "keyboardSetup.h"
-String KEYBOARD_NAME = "myKeyboardName";
+String KEYBOARD_NAME = "brotendo";
 
 // characters. Note that [32] is updated because there are 5 buttons, also '0x08' is hex for backspace
 const char keyMap[64] = {'0', 'E', 'A', 'T', 'R', 'N', 'S', 'G', 'I', 'L',
                          'C', 'B', 'U', 'F', 'Y', 'J', 'O', 'D', 'P', 'W',
-                         'M', 'K', 'V', 'Q', 'H', 'X', 'Z', '0', '1', '2',
-                         '3', '4', '5', '6', '7', '8', '9', '_', '_', ' ',
+                         'V', 'X', '!', '!', 'H', 'K', 'Z', 'M', 'Q', ' ',
+                         '0x08', '4', '5', '6', '7', '8', '9', '_', '_', ' ',
                          '.', ',', '?', '!', '/', '(', ')'
                         };
 
@@ -39,7 +39,7 @@ const int LEDpin = 5;
 //
 void setup(void)
 {
-  while (!Serial);  // wait for Serial to startup - maybe don't need this?
+  //while (!Serial);  // wait for Serial to startup - maybe don't need this?
   delay(500);
 
   Serial.begin(115200);
