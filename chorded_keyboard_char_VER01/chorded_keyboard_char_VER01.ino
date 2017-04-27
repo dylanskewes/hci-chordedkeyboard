@@ -16,12 +16,11 @@
 #include "keyboardSetup.h"
 String KEYBOARD_NAME = "brotendo";
 
-// characters. Note that [32] is updated because there are 5 buttons, also '0x08' is hex for backspace
-const char keyMap[64] = {'0', 'E', 'A', 'T', 'R', 'N', 'S', 'G', 'I', 'L',
-                         'C', 'B', 'U', 'F', 'Y', 'J', 'O', 'D', 'P', 'W',
-                         'V', 'X', '!', '!', 'H', 'K', 'Z', '!', 'M', 'Q',
-                         ' ', '0x08?', '5', '6', '7', '8', '9', '_', '_', ' ',
-                         '.', ',', '?', '!', '/', '(', ')'
+// characters. 
+const char keyMap[32] = {'0', ' ', 'E', 'O', 'T', 'I', 'N', 'M', 'A', 'S',
+                         'L', 'G', 'C', 'Y', 'F', 'J', 'R', 'H', 'D', 'W',
+                         'U', 'B', '!', '!', 'P', 'V', 'K', '!', 'X', 'Q',
+                         'Z', 0x08
                         };
 
 // pin settings
