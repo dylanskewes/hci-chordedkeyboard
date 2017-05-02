@@ -19,8 +19,8 @@ String KEYBOARD_NAME = "brotendo";
 // characters. 
 const char keyMap[32] = {'0', ' ', 'E', 'O', 'T', 'I', 'N', 'M', 'A', 'S',
                          'L', 'G', 'C', 'Y', 'F', 'J', 'R', 'H', 'D', 'W',
-                         'U', 'B', '!', '!', 'P', 'V', 'K', '!', 'X', 'Q',
-                         'Z', 0x08
+                         'U', 'B', '!', '!', 'P', 'V', 'K', 'Z', 'X', 'Q',
+                         '.', 0x08
                         };
 
 // pin settings
